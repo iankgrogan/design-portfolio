@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ian Grogan Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+<!-- NAV -->
+        <nav class="project_nav">
+            <a href="/index.html">
+                <button class="back_button">
+                    <img class="back_arrow" alt="back icon" src="img/back_arrow.svg">
+                    Back
+                </button>
+            </a>
+        </nav>
+<!-- HEADER -->
+        <div class="project_container">
+            <header class="project_header_container">
+                <div class="project_header_text">
+                    <h1 class="project_title">KBX Invoicing</h1>
+                    <h2 class="project_subtitle">Connecting systems for KBX invoices and accruals.</h2>
+                </div>  
+                    <img class="project_logo" alt="company logo" src="img/KBX/logo.svg">
+                <img class="project_cover_image" alt="mockup image of UI" src="img/KBX/cover.png">
+            </header>
+
+            <div class="section_container">
+                <div class="project_overview_section">
+                    <div class="overview_section">
+                        <h2 class="project_section_heading">Overview</h2>
+                        <p>This is a small sample of work that I have been given permission to share high fidelity designs of from my contributions at KBX. This work is from the “Payables” feature that our product team designed and built. It connects to other features we created as well, but due to an NDA I will be limited in referencing them.</p>
+                    </div>
+
+                    <div class="overview_section">
+                        <h2 class="project_section_heading">Goal</h2>
+                        <p>The goal of this feature was to provide a series of screens that allowed users on the finance team to accurately keep a record of accruals and invoices for their leases. This feature was not intended to be the primary source of “financial truth,” but to serve as an internal backup source that the business could reference and compare to shared external financial systems with their customers.</p>
+                    </div>
+                </div>
+            </div>
+<!-- PERSONAS -->
+            <div class="section_container">
+                <div class="centered_heading">
+                    <h2 class="project_section_heading">Personas</h2>
+                    <p>The persona for this feature is a user from the finance team focused specifically on leasing charges. We will refer to this persona as “Leasing Finance Specialist.” There were other types of charges handled in this product, and a very similar but different feature addressed the handling of those charges. Often the same users may be performing similar tasks across different areas of the billing section of the product.</p>
+                </div>
+                <br>
+                <br>
+            </div>
+            <div class="section_container">
+                <div class="personas_card">
+                    <h3>Leasing Finance Specialist</h3>
+                  
+                    <h4>General Info</h4>
+                    <ul>
+                       <li>Responsible for ensuring accuracy of monthly accruals and invoices</li>
+                       <br>
+                       <li>Usually very busy/overloaded as changes occur to leases throughout the month resulting in many small changes in charges for accruals and invoices that need to be vetted and verified</li>
+                    </ul>
+                    
+                    <h4>Pain Points</h4>
+                    <ul>
+                        <li>Need ability to search for a batch of invoices and work through them with the ability to jump back and forth between ones they are actively working with, legacy system forced users to continually go back to the search screen to switch between invoices</li>
+                        <br>
+                        <li>Need ability to “approve” accruals and invoices directly in the product instead of needing to go to an external software</li>
+                        <br>
+                        <li>Need ability to perform partial approvals, legacy system lacked this option </li>
+                        <br>
+                        <li>Would like to combine accruals and invoicing into the same space instead of having different navigation links to access them</li>
+                    </ul>
+                </div>
+            </div>
+<!-- WIREFRAMES FEEDBACK -->
+            <div class="section_container">
+                <h2 class="project_section_heading">Wireframes & Feedback</h2>
+                <p>I will preface this section by saying I do not have any examples from this portion of the work that I can share, but I will walk through the highlights of the work I did and the outcomes.</p>
+                <br>
+                <p>I created mid-fidelity wireframes for this feature. I had enough of an idea of how the screens should be structured and flow based on UX patterns from previous features we had completed that true low-fidelity wireframes would have been wasted effort here.</p>
+                <br>
+                <p>These mid-fidelity frames consisted of a ‘base’ layout with some known inputs, buttons, and table cells along with placeholders to give the users a visual of the direction the design would be headed. This allowed me and the product manager to spur conversation around the details that we still needed to fill in, as this was not meant to be a 1:1 copy of their legacy system but a modernized redesign with new functionality. These mid-fidelity designs were used as tools to gather the initial sentiment of the users and fill in the remaining gaps for what the UI needed to house.</p>
+            </div>
+<!-- HI FIDELITY -->
+            <div class="section_container">
+                    <h2 class="project_section_heading">UI Design</h2>
+                    <p>Below are samples from the final product. These designs were created using the KBX design system that I helped establish patterns for. High-fidelity mockups were shown to users for feedback as part of the iterative design process. For this particular feature, I created a prototype of the various paths that users could take and included the actions they could complete along those paths.</p>
+            </div>
+
+            <div class="section_container"> 
+                <div class="center_image">
+                    <div class="imgdropshadow">
+                        <img id="highfidelity_frames" src="/img/KBX/highfi_frame1.png" alt="high fidelity wireframe">
+
+                    </div>
+                 </div>
+                <br>
+                <br>
+                <p>An example of an iteration made after feedback is the inclusion of the “Regenerate accruals” button in the Payables Search screen. Through all of the discovery and design up to this point, this need to manually generate accruals had not been mentioned or considered by the users. User testing in a live environment led to this gap being identified, and we were able to add in the “Regenerate accruals” function. Sadly, I do not have visuals to share for this function.</p>
+            </div>
+
+            <div class="section_container"> 
+                <div class="center_image">
+                    <div class="imgdropshadow">
+                        <img id="highfidelity_frames" src="/img/KBX/highfi_frame2.png" alt="high fidelity wireframe">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <p>Due to the lack of visual references I have to share, below is summary of the workflow and functionality these two screens provided.</p>
+            </div>
+
+            <div class="section_container">
+                <h3 class="project_section_subheading">Payables Search</h3>
+                
+                <p>Users come here to search for accruals and invoices that they need to approve or reject. They start by choosing what object they want to search for: accruals or invoices. Based on their query, the results table displays the corresponding data. From there they may take “quick actions” of approving or rejecting by selecting rows of the table and clicking the button in the table head. If the invoices selected do not meet the right criteria to be approved/rejected, the users get alerted that they need to do further work. They can click on any row to view the invoice in detail and see all line items.</p>
+            </div>
+
+            <div class="section_container">
+                <h3 class="project_section_subheading">Invoice</h3>
+                
+                <p>This is where users can view the details of the invoice and see more intricate information down in the line items table. They can also reject or approve the invoice directly from this screen, but to approve an invoice, all line items need to have been updated from their default “pending” status to one of the other statuses (rejected, matched, approved). If this is not done, users get an alert to do so when clicking “approve invoice”. To update the statuses of line items, users click on the vertical three-dot menu, which opens an overflow menu for them to choose various actions from. In addition to updating statuses via this overflow menu, users can also choose to add line items manually.</p>
+            </div>
+
+            <div class="section_container">
+                <h3 class="project_section_subheading">A note on design choices...</h3>
+                
+                <p>You may notice the tables look different between the Payables Search and Invoice screens. The payables search screen utilizes a material table with some custom filters we added to the columns. The invoice screen was designed to use the same style of table originally but was later redesigned to utilize AGgrid. This change came after feedback from user testing with wanting to have the choice to reorganize columns in the line items table to suit their needs. We tried nailing down a set order of the columns that all users liked, but ultimately there were too many preferences, so we implemented AGgrid which has the ability for users to drag and reorder columns natively built in.</p>
+                <br>
+                <p>AGgrid also offers in-line editing of data within the table, and you might think that would make more sense for updating the statuses of line items when compared to the overflow menu with actions that we went with. This was an intentional choice to retain the overflow menu with actions instead of implementing in-line editing. Users wanted to be able to filter the table, select line items, and click one button to update their statuses. The user's needs fit best into our UI pattern of using an overflow menu with actions. Implementing in-line editing in this table would result in extra clicks for users to complete the same task.</p>
+            </div>
+<!-- CONCLUSION -->
+            <div class="section_container">
+                <div class="centered_heading">
+                    <h2 class="project_section_heading">Learnings & Takeaways</h2>
+                </div>
+                <p>This portfolio highlight covered a small example of work from my time at KBX. The most challenging portion of this feature was getting into the shoes of the user and understanding their workflow from the perspective of the business. The actual design is nothing crazy, but I think that is an important takeaway to consider. Designs do not have to be overly complex to be the right solution. Oftentimes a straightforward layout and flow is the right choice; working on this feature and others like it at KBX reinforced that for me as a designer. Start simple, add complexity as desired by the user, just as we did with going back and adding AGgrid in place of a simple material table. The other lesson I learned on this feature is that the user may know everything they need, but it doesn’t mean they will tell you everything they need. You can do all of the discovery interviews, low-fidelity walkthroughs, and high-fidelity prototype testing, but sometimes things still slip through the cracks. The needed addition of the manual regeneration of accruals is a perfect example of why allowing users to test a “finished” product is so vital to the UX process.</p>
+            </div>
+
+        </div>
+    </body>
