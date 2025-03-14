@@ -237,7 +237,7 @@ h2.hero {
     transition: background-color 1s linear;
     border-radius: .5rem;
     overflow: hidden;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .work_highlight_image_container:hover {
