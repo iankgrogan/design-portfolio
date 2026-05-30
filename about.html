@@ -1,75 +1,205 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ian Grogan Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Ian Grogan</title>
+  <meta name="description" content="About Ian Grogan, UX Product Designer based in South Carolina.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .about-hero-text h1 { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.1s both; }
+    .about-hero-text p  { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.22s both; }
+    .about-img-wrap     { animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.15s both; }
 
+    .about-page-eyebrow {
+      font-size: 0.75rem; font-weight: 400;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--color-ink-3); margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .about-page-eyebrow::before {
+      content:''; width:1.5rem; height:1px; background:var(--color-accent);
+    }
 
-    <body>
-         <!--nav menu-->
-         <nav class="nav">
-            <ul class="nav_list"> 
-                <li><a class="nav_link" href="index.html" >Home</a></li>
-                <li><a class="nav_link" id="active_nav" href="about.html" >About</a></li>
-            </ul>
-        </nav>
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1px;
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+    .skill-item {
+      background: var(--color-surface);
+      padding: 1.25rem;
+      font-size: 0.85rem; color: var(--color-ink-2);
+      transition: background 0.2s ease;
+    }
+    .skill-item:hover { background: var(--color-accent-soft); }
+    .skill-name { font-weight: 400; color: var(--color-ink); margin-bottom: 0.2rem; }
 
-        <!--about section-->
-        <div id="about_page_container">
+    .timeline-list { display: flex; flex-direction: column; gap: 0; margin-top: 1.5rem; }
+    .timeline-item {
+      display: grid; grid-template-columns: 120px 1fr;
+      gap: 2rem; padding: 1.5rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .timeline-item:first-child { border-top: 1px solid var(--color-border); }
+    .timeline-year { font-size: 0.8rem; color: var(--color-ink-3); padding-top: 0.25rem; }
+    .timeline-content h4 { font-family: var(--font-display); margin-bottom: 0.25rem; font-size:1rem; }
+    .timeline-content p { font-size:0.875rem; max-width:none; }
+  </style>
+</head>
+<body>
 
-                <!--intro-->
-            <div id="about_header_container">
-                <div class="section_container" id="about_intro_container">
-                        <div id="about_intro_text" >
-                            <div id="about_intro_title_container">
-                                <h1 id="about_intro_heading">Hey, I'm Ian</h1>
-                                <img id="about_title_emoji" src="img/about/waving-hand-light-skin-tone-removebg-preview.png" alt="emoji wave icon">
-                            </div> 
-                            <p>I'm a user experience product designer based in South Carolina living with my wfie and our daughter.</p>
-                        </div>
-                </div>
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Ian Grogan</a>
+    <div class="nav-links">
+      <a href="index.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="about.html#contact" class="btn btn-ghost" style="padding:0.5rem 1.1rem;font-size:0.75rem;">Let's Talk</a>
+    </div>
+  </nav>
 
-                <!--image-->
-                <div id="about_intro_image_container">
-                    <img id="about_intro_image" src="img/about/family.jpg" alt="Ian Grogan and family">
-                </div>
-            </div>  
+  <div class="page-wrap">
 
-                <div id="about_main_content_container">
-                    <!--What do I do?-->
-                    <div id="about_whatdoidocontainer" class="section_container">
-                        <h1 class="section_heading">What do I do?</h1>
-                        <p id="about_whatdoido_text">I enjoy designing digital solutions that improve people’s lives, jobs, and experiences. Solving problems scratches the itch for the left side of my brain, and doing so through visually appealing designs gives the right side of my brain the warm and fuzzies. My strong suits are building mutually beneficial working relationships with end users and creating logical UI flows based on their needs. </p>
-                    </div>
+    <!-- HERO -->
+    <div class="about-hero">
+      <div class="about-hero-text">
+        <div class="about-page-eyebrow">About</div>
+        <h1>Hey, I'm Ian</h1>
+        <p>
+          I'm a user experience product designer based in South Carolina, living with my wife and our daughter.
+        </p>
+        <p>
+          I enjoy designing digital solutions that improve people's lives, jobs, and experiences. Solving problems scratches the itch for the left side of my brain — and doing so through visually appealing designs gives the right side the warm and fuzzies.
+        </p>
+        <p>
+          My strong suits are building mutually beneficial working relationships with end users and creating logical UI flows based on their needs. I also integrate AI heavily into my design process — using tools like Figma Make, Claude, and Copilot to move faster, stay organized, and spend more time on the work that matters.
+        </p>
+      </div>
+      <div class="about-img-wrap">
+        <img class="about-img"
+             src="https://iankgrogan.github.io/design-portfolio/img/about/family.jpg"
+             alt="Ian with family" loading="eager">
+      </div>
+    </div>
 
-                    <!--How did I get into UX-->
-                    <div id="about_howdidigetintouxcontainer" class="section_container">
-                            <h1 class="section_heading">How did I get into UX?</h1>
-                            <p>I started my career in the tech industry as a software engineer. I quickly realized that I enjoyed working with people more than I did writing code. I transitioned into a product management role, where I was able to work closely with users to understand their needs and pain points. This experience sparked my interest in user experience design, and I decided to pursue a career in this field.</p>
-                            <br>
-                            <p>In high school and going into college, I developed a strong passion for photography and videography. At the peak of that pursuit, I was able to film professional motocross riders and races, as well as college football and basketball games. </p>
-                            <br>
-                            <p>I graduated college with a major in economics and a minor in finance. At my first place of employment, there was an opportunity (a total void) for UI design. Having photo and video editing skills, I started out utilizing primitive tools to make UI layouts. As you can imagine, I quickly learned there is more to UI design than a pretty layout. This is when I started to really learn about the total UX design process and gain experience implementing it. Fast forward, and I’ve been full-time designing for the past 4-5 years, improving with every new challenge.</p>
-                    </div>
-                
-                    <!--Contact me-->
-                    <div id="about_contactmecontainer" class="section_container">
-                        <div id="about_contactme_title_container">
-                            <h1 class="section_heading">Contact me</h1>
-                        </div>
+    <div class="about-sections">
 
-                        <div id="about_contactme_text_container">
-                            <p id="about_contactme_text">If you’re interested in working together, please reach out via email or LinkedIn. I’d be happy to discuss opportunities with you and how I can provide value to your project.  </p>
-                            <div id="about_links_container">
-                                <a href="mailto:iankgrogan@gmail.com" id="about_contactme_email">iankgrogan@gmail.com</a>
-                                <a href="https://www.linedin.com/in/iankgrogan"><img id="linked_in_logo" src="img/about/linked-in-logo-removebg-preview.png" alt=""linked in logo></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- What I Do -->
+      <div class="about-block reveal">
+        <div class="about-block-label">What I do</div>
+        <div>
+          <h2>Designing with purpose &amp; people.</h2>
+          <p>
+            I enjoy designing digital solutions that improve people's lives, jobs, and experiences. My strong suits are building mutually beneficial working relationships with end users and creating logical UI flows based on their needs.
+          </p>
+          <p>
+            I integrate AI tools heavily into my design process — using Figma Make for rapid design exploration and iteration, Claude for project organization and planning, and Copilot for general productivity tasks. This lets me move faster through the early stages of a project and spend more focused time on what matters: solving the right problems for the right users.
+          </p>
+          <div class="skills-grid">
+            <div class="skill-item"><div class="skill-name">UX Research</div>Discovery, Interviews</div>
+            <div class="skill-item"><div class="skill-name">Wireframing</div>Lo-fi to Hi-fi</div>
+            <div class="skill-item"><div class="skill-name">Prototyping</div>Interactive Flows</div>
+            <div class="skill-item"><div class="skill-name">Design Systems</div>Pattern Libraries</div>
+            <div class="skill-item"><div class="skill-name">User Testing</div>Feedback & Iteration</div>
+            <div class="skill-item"><div class="skill-name">Figma</div>+ Figma Make</div>
+            <div class="skill-item"><div class="skill-name">Claude</div>Planning & Org</div>
+            <div class="skill-item"><div class="skill-name">Copilot</div>General Tasks</div>
+            <div class="skill-item"><div class="skill-name">AI-Assisted Design</div>Faster Iteration</div>
+          </div>
         </div>
-    </body> 
+      </div>
+
+      <!-- How I got here -->
+      <div class="about-block reveal">
+        <div class="about-block-label">Background</div>
+        <div>
+          <h2>Creativity has always been the thread.</h2>
+          <p>
+            A bit of a long story, but I've always had a desire and drive to be creative. From an early age I wanted to be creative through music, and at the age of seven I learned to play bass guitar and joined a band (yes, it was as cringe as you might think it was).
+          </p>
+          <p>
+            In high school and going into college, I developed a strong passion for photography and videography. At the peak of that pursuit, I was able to film professional motocross riders and races, as well as college football and basketball games.
+          </p>
+          <p>
+            I graduated college with a major in economics and a minor in finance. At my first place of employment, there was an opportunity (a total void) for UI design. Having photo and video editing skills, I started out utilizing primitive tools to make UI layouts. As you can imagine, I quickly learned there is more to UI design than a pretty layout. This is when I started to really learn about the total UX design process and gain experience implementing it. Fast forward, and I've been full-time designing for the past 4–5 years, improving with every new challenge.
+          </p>
+
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-year">Early life</div>
+              <div class="timeline-content">
+                <h4>Bass guitar &amp; band life</h4>
+                <p>First creative pursuit — music. The cringe era that started it all.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">College</div>
+              <div class="timeline-content">
+                <h4>Photography &amp; videography</h4>
+                <p>Filmed professional motocross riders, college football, and basketball games at the peak of the pursuit.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">Discovery</div>
+              <div class="timeline-content">
+                <h4>First steps in UX</h4>
+                <p>Spotted a total void for UI design at my first job. Quickly learned there's far more to it than a pretty layout.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">Now</div>
+              <div class="timeline-content">
+                <h4>Full-time UX Product Designer</h4>
+                <p>4–5 years of dedicated design work across SaaS, logistics, finance, and mobile.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="about-block reveal" id="contact">
+        <div class="about-block-label">Contact</div>
+        <div>
+          <h2>Let's work together.</h2>
+          <p>
+            If you're interested in working together, please reach out via email or LinkedIn. I'd be happy to discuss opportunities and how I can provide value to your project.
+          </p>
+          <div class="contact-row">
+            <a href="mailto:iankgrogan@gmail.com" class="btn btn-primary">
+              iankgrogan@gmail.com
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/iankgrogan" target="_blank" rel="noopener" class="btn btn-ghost">
+              LinkedIn
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M10 4H4v6m0-6l6 6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span class="footer-copy">© 2025 Ian Grogan</span>
+      <div class="footer-links">
+        <a href="mailto:iankgrogan@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/iankgrogan" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>

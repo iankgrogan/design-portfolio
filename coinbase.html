@@ -1,244 +1,241 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ian Grogan Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-<!-- NAV -->
-        <nav class="project_nav">
-            <a href="index.html">
-                <button class="back_button">
-                    <img class="back_arrow" alt="back icon" src="img/back_arrow.svg">
-                    Back
-                </button>
-            </a>
-        </nav>
-<!-- HEADER -->
-        <div class="project_container">
-            <header class="project_header_container">
-                <div class="project_header_text">
-                    <h1 class="project_title">Connecting Crypto</h1>
-                    <h2 class="project_subtitle">Creating a community for one of the world’s most popular crypto exchanges, Coinbase.</h2>
-                </div>  
-                    <img class="project_logo" alt="company logo" src="img/coinbase/logo.svg">
-                <img class="project_cover_image" alt="mockup image of UI" src="img/coinbase/cover.png">
-            </header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connecting Crypto — Ian Grogan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .case-back     { animation: fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.05s both; }
+    .case-eyebrow  { animation: fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.1s both; }
+    .case-title    { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.18s both; }
+    .case-subtitle { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.26s both; }
+    .case-meta     { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.32s both; }
+  </style>
+</head>
+<body>
 
-            <div class="section_container">
-                <div class="project_overview_section">
-                    <div class="overview_section">
-                        <h2 class="project_section_heading">Overview</h2>
-                        <p>This is a portfolio-building project to step out of my usual box of SaaS logistics applications and design a new feature for an existing mobile application. I myself am a user of Coinbase and have had a desire for a feature where I could communicate with other Coinbase users to better understand market sentiment.</p>
-                    </div>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Ian Grogan</a>
+    <div class="nav-links">
+      <a href="index.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="about.html#contact" class="btn btn-ghost" style="padding:0.5rem 1.1rem;font-size:0.75rem;">Let's Talk</a>
+    </div>
+  </nav>
 
-                    <div class="overview_section">
-                        <h2 class="project_section_heading">Goal</h2>
-                        <p>If this were a real project, the goal would be to provide a community where Coinbase users can connect with each other regarding an asset of their interest, resulting in increased time spent by users viewing a particular asset and an increase in the likelihood of them executing more transactions on Coinbase.</p>
-                    </div>
-                </div>
-            </div>
-<!-- PERSONAS -->
-            <div class="section_container">
-                <div class="centered_heading">
-                    <h2 class="project_section_heading">Personas</h2>
-                    <p>Personas for this project are loosely based around myself and friends who are retail crypto investors that utilize Coinbase as their main exchange. Even for this simple portfolio project, defining personas helped keep focus on priorities for the design.</p>
-                </div>
-                <br>
-                <div class="centered_ul">
-                    <p>The key factors to capture for personas were:</p>
-                    <ul>
-                        <li>Crypto investment styel or strategy</li>
-                        <li>Frequency of referencing a particular asset on Coinbase</li>
-                        <li>Where and how do they consume news or information about crypto</li>
-                    </ul>
-                </div>
-                <br>
-                <br>
-            </div>
-            <!-- PERSONA CARDS -->
-            <div class="cards_container">
-                <div class="card">    
-                    <div>
-                        <h3>Ian</h3>
-                    </div>
-                    <div class="card_section">
-                        <div>
-                            <h4>Basic Info</h4>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Age</p>
-                            <p>29</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Job</p>
-                            <p>UX Designer</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Education</p>
-                            <p>Economics</p>
-                        </div>
-                    </div>
-                    <div class="card_section">
-                        <div>
-                            <h4>Crypto Tendencies</h4>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Investment style</p>
-                            <p>Short term, growth</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Coinbase usage</p>
-                            <p>3-4 times per week</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Common platform</p>
-                            <p>Mobile</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Crypto resources</p>
-                            <p>Coin Market Cap, Youtbue, X</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="page-wrap">
 
-                <div class="card">    
-                    <div>
-                        <h3>Phil</h3>
-                    </div>
-                    <div class="card_section">
-                        <div>
-                            <h4>Basic Info</h4>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Age</p>
-                            <p>31</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Job</p>
-                            <p>Attorney</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Education</p>
-                            <p>Law</p>
-                        </div>
-                    </div>
-                    <div class="card_section">
-                        <div>
-                            <h4>Crypto Tendencies</h4>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Investment style</p>
-                            <p>Short term, growth</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Coinbase usage</p>
-                            <p>Multiple times per day</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Common platform</p>
-                            <p>Mobile</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Crypto resources</p>
-                            <p>Friends, social media</p>
-                        </div>
-                    </div>
-                </div>
+    <div class="case-hero">
+      <a href="index.html" class="case-back">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 11L2 7l4-4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All Work
+      </a>
+      <div class="case-eyebrow">
+        <div class="section-label">Mobile · Community · Consumer</div>
+      </div>
+      <h1 class="case-title">Connecting Crypto</h1>
+      <p class="case-subtitle">Creating a community feature for one of the world's most popular crypto exchanges, Coinbase.</p>
 
-                <div class="card">    
-                    <div>
-                        <h3>Ethan</h3>
-                    </div>
-                    <div class="card_section">
-                        <div>
-                            <h4>Basic Info</h4>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Age</p>
-                            <p>34</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Job</p>
-                            <p>Musician</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Education</p>
-                            <p>Audio Engineer</p>
-                        </div>
-                    </div>
-                    <div class="card_section">
-                        <div>
-                            <h4>Crypto Tendencies</h4>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Investment style</p>
-                            <p>Long term, wealth</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Coinbase usage</p>
-                            <p>Daily</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Common platform</p>
-                            <p>Desktop, mobile</p>
-                        </div>
-                        <div class="card_detail_row">
-                            <p class="p_label">Crypto resources</p>
-                            <p>Mentor, social media, friends</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                  
-<!-- WIREFRAMES FEEDBACK -->
-            <div class="section_container">
-                <h2 class="project_section_heading">Wireframes</h2>
-                <p>Using Figma, I created low-fidelity wireframes. The low-fidelity wireframes were used for gathering initial feedback as a proof of concept to the users, as well as to plan out a general idea for the solution.</p>
-                <br>
-                <div id="wireframe_container">
-                    <img id="wireframe_img" src="img/coinbase/lowfi_frames.png" alt="Low fidelity wireframes">
-                </div>
-            </div>
-
-            <div class="section_container" div id="user_feedback">
-                <h2 class="project_section_heading">User Feedback</h2>
-                <p>Users were overall content with the first iteration and felt that the concept would be viable. Criticism of the sentiment buttons in the post drawer was raised.</p>
-            </div>
-<!-- HI FIDELITY -->
-           <div class="section_container">
-                <h2 class="project_section_heading">UI Design</h2>
-                <p>This project was a good example of my abilities to work within an already defined design system. I recreated a mini design kit for things that would be necessary to complete the UIs.</p>
-            </div>
-            
-            <div class="section_container">
-                <img id="components_img" src="img/coinbase/design_components.png" alt="design components">
-            </div>
-            <br>
-            <br>
-            <div class="section_container">
-                <div class="centered_heading">
-                    <p>These high fidelity mockups were then shown to users for final feedback. Users felt the design fit seamlessly into the Coinbase experience.</p>
-                </div>
-            </div>
-
-            <div class="section_container" id="coinbase_mockups">
-                <img src="img/coinbase/highfi_frames.png" alt="high fidelity mockups">
-            </div>
-
-            <div class="section_container">
-                <div class="centered_heading">
-                    <p>Some users mentioned that it would be nice to implement features like gif and image sharing as well. If this were a real project, these could be considered post-MVP features to add.</p>
-                </div>
-            </div>         
-<!-- CONCLUSION -->
-            <div class="section_container">
-                <div class="centered_heading">
-                    <h2 class="project_section_heading">Learnings & Takeaways</h2>
-                </div>
-                <p>This project was a great experience for me in designing with the mobile-first mindset. I’ve designed for mobile before, but it was never the primary focus. This project also a great representation of how I am able to tap into an existing design system and create something that fits in seamlessly, as mentioned by one of the users. I’m happy with the overall solution I presented and wish this were in front of more users for more feedback.</p>
-            </div>
+      <div class="case-meta">
+        <div class="case-meta-item">
+          <div class="case-meta-label">Type</div>
+          <div class="case-meta-value">Portfolio / Concept Project</div>
         </div>
-    </body>
+        <div class="case-meta-item">
+          <div class="case-meta-label">Role</div>
+          <div class="case-meta-value">UX / Product Designer</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="case-meta-label">Tools</div>
+          <div class="case-meta-value">Figma, Coinbase Design System (recreated)</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="case-meta-label">Focus</div>
+          <div class="case-meta-value">Mobile-first · Design Systems · Community UX</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:var(--max-w); margin:0 auto; padding:0 clamp(1.5rem,5vw,4rem) 3rem;">
+      <img class="case-cover"
+           src="https://iankgrogan.github.io/design-portfolio/img/coinbase/cover.png"
+           alt="Connecting Crypto UI mockup" loading="eager">
+    </div>
+
+    <div class="case-body">
+
+      <!-- Overview -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Overview</div>
+        <div class="case-section-content">
+          <h2>Stepping outside the SaaS box</h2>
+          <p>
+            This is a portfolio-building project designed to step out of my usual world of SaaS logistics applications and design a new feature for an existing mobile application. As a Coinbase user myself, I've long wanted a feature where I could connect with other users to better understand market sentiment around specific assets.
+          </p>
+        </div>
+      </div>
+
+      <!-- Goal -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Goal</div>
+        <div class="case-section-content">
+          <h2>Community-driven sentiment</h2>
+          <p>
+            If this were a real project, the goal would be to provide a community where Coinbase users can connect with each other around an asset of their interest — resulting in increased time spent viewing a particular asset and a higher likelihood of executing more transactions on the platform.
+          </p>
+          <div class="callout">
+            <p>Connecting users around shared interests increases engagement and ultimately benefits both the user (better information) and the business (more transactions).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personas -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Personas</div>
+        <div class="case-section-content">
+          <h2>Retail crypto investors</h2>
+          <p>
+            Personas for this project are loosely based around myself and friends who are retail crypto investors using Coinbase as their main exchange. Even for this concept project, defining personas kept focus on priorities for the design.
+          </p>
+          <p>Key factors captured: crypto investment style, frequency of checking a particular asset on Coinbase, and where/how they consume crypto news and information.</p>
+
+          <div class="persona-grid">
+            <div class="persona-card">
+              <div class="persona-name">Ian</div>
+              <div class="persona-detail" style="margin-top:0.75rem;">
+                <span>Age: <span>29</span></span>
+                <span>Job: <span>UX Designer</span></span>
+                <span>Education: <span>Economics</span></span>
+                <span style="margin-top:0.5rem;">Style: <span>Short term, growth</span></span>
+                <span>Usage: <span>3–4 times/week</span></span>
+                <span>Platform: <span>Mobile</span></span>
+                <span>Resources: <span>CoinMarketCap, YouTube, X</span></span>
+              </div>
+            </div>
+            <div class="persona-card">
+              <div class="persona-name">Phil</div>
+              <div class="persona-detail" style="margin-top:0.75rem;">
+                <span>Age: <span>31</span></span>
+                <span>Job: <span>Attorney</span></span>
+                <span>Education: <span>Law</span></span>
+                <span style="margin-top:0.5rem;">Style: <span>Short term, growth</span></span>
+                <span>Usage: <span>Multiple times/day</span></span>
+                <span>Platform: <span>Mobile</span></span>
+                <span>Resources: <span>Friends, social media</span></span>
+              </div>
+            </div>
+            <div class="persona-card">
+              <div class="persona-name">Ethan</div>
+              <div class="persona-detail" style="margin-top:0.75rem;">
+                <span>Age: <span>34</span></span>
+                <span>Job: <span>Musician</span></span>
+                <span>Education: <span>Audio Engineer</span></span>
+                <span style="margin-top:0.5rem;">Style: <span>Long term, wealth</span></span>
+                <span>Usage: <span>Daily</span></span>
+                <span>Platform: <span>Desktop + mobile</span></span>
+                <span>Resources: <span>Mentor, social media, friends</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wireframes -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Wireframes</div>
+        <div class="case-section-content">
+          <h2>Proof of concept in lo-fi</h2>
+          <p>
+            Using Figma, I created low-fidelity wireframes. These were used for gathering initial feedback as a proof of concept, as well as planning the general direction for the solution.
+          </p>
+          <img class="case-image"
+               src="https://iankgrogan.github.io/design-portfolio/img/coinbase/lowfi_frames.png"
+               alt="Low fidelity wireframes" loading="lazy">
+          <p class="case-image-caption">Low-fidelity wireframes used for initial feedback</p>
+
+          <h3>User Feedback</h3>
+          <p>
+            Users were overall receptive to the first iteration and felt the concept was viable. One piece of criticism raised was around the sentiment buttons in the post drawer — which I addressed in subsequent iterations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Design System -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Design System</div>
+        <div class="case-section-content">
+          <h2>Designing within an existing system</h2>
+          <p>
+            This project was a strong test of my ability to work within an already-defined design system. I recreated a mini design kit from the components needed to complete the UIs — matching Coinbase's visual language closely enough that users felt it fit seamlessly into the existing experience.
+          </p>
+          <img class="case-image"
+               src="https://iankgrogan.github.io/design-portfolio/img/coinbase/design_components.png"
+               alt="Design components created for the project" loading="lazy">
+          <p class="case-image-caption">Recreated mini design kit — components matching Coinbase's design language</p>
+        </div>
+      </div>
+
+      <!-- UI Design -->
+      <div class="case-section reveal">
+        <div class="case-section-label">UI Design</div>
+        <div class="case-section-content">
+          <h2>High-fidelity and user-validated</h2>
+          <p>
+            These high-fidelity mockups were shown to users for final feedback. The response was consistently that the design felt like a natural extension of the Coinbase app.
+          </p>
+          <img class="case-image"
+               src="https://iankgrogan.github.io/design-portfolio/img/coinbase/highfi_frames.png"
+               alt="High fidelity mockups" loading="lazy">
+          <p class="case-image-caption">High-fidelity mockups — validated by users as fitting seamlessly within Coinbase</p>
+
+          <p>
+            Some users suggested adding gif and image sharing as well. If this were a real project, those would be strong candidates for post-MVP features.
+          </p>
+        </div>
+      </div>
+
+      <!-- Learnings -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Takeaways</div>
+        <div class="case-section-content">
+          <h2>Designing mobile-first, with constraint</h2>
+          <p>
+            This project was a great exercise in the mobile-first mindset. I've designed for mobile before, but never as the primary focus — and the constraints of a small screen sharpened every design decision.
+          </p>
+          <p>
+            It's also a strong representation of my ability to work within an existing design system and create something that fits in seamlessly — exactly what users confirmed. I'm happy with the overall solution and would have loved to put it in front of a larger group for more feedback.
+          </p>
+          <div class="callout">
+            <p>The clearest skill I sharpened here: knowing when to follow the design system's rules and when to use good judgment to serve the user's needs — without breaking the overall experience.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Back to work -->
+    <div style="max-width:var(--max-w); margin:0 auto; padding:0 clamp(1.5rem,5vw,4rem) clamp(4rem,8vw,7rem); display:flex; justify-content:flex-end;">
+      <a href="index.html" class="btn btn-ghost">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 11L2 7l4-4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to All Work
+      </a>
+    </div>
+
+    <footer class="footer">
+      <span class="footer-copy">© 2025 Ian Grogan</span>
+      <div class="footer-links">
+        <a href="mailto:iankgrogan@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/iankgrogan" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,165 +1,223 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ian Grogan Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-<!-- NAV -->
-        <nav class="project_nav">
-            <a href="index.html">
-                <button class="back_button">
-                    <img class="back_arrow" alt="back icon" src="img/back_arrow.svg">
-                    Back
-                </button>
-            </a>
-        </nav>
-<!-- HEADER -->
-        <div class="project_container">
-            <header class="project_header_container">
-                <div class="project_header_text">
-                    <h1 class="project_title">SaaS Dashboard</h1>
-                    <h2 class="project_subtitle">Creating an action driven dashboard for Service Analysts.</h2>
-                </div>  
-                    <img class="project_logo" alt="company logo" src="img/SaaS/logo.svg">
-                <img class="project_cover_image" alt="mockup image of UI" src="img/SaaS/cover.png">
-            </header>
-<!-- OVERVIEW -->
-            <div class="section_container">
-                <div class="project_overview_section">
-                    <div class="overview_section">
-                        <h2 class="project_section_heading">Overview</h2>
-                        <p>This is a portfolio project similar to professional work I have done that is protected by NDA. The fifty-thousand-foot overview of this project is to build a dashboard that highlights information that service analysts can go take action on. The dashboard should serve as a driver for the service analyst’s day-to-day actions. I created this utilizing the Flowbite design system in place of the original design system.</p>
-                    </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Dashboard — Ian Grogan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .case-back    { animation: fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.05s both; }
+    .case-eyebrow { animation: fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.1s both; }
+    .case-title   { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.18s both; }
+    .case-subtitle { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.26s both; }
+    .case-meta    { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.32s both; }
+  </style>
+</head>
+<body>
 
-                    <div class="overview_section">
-                        <h2 class="project_section_heading">Goal</h2>
-                        <p>The goal of this project was to create an action-driven dashboard for users who are responsible for scheduling and communicating repair services on various pieces of equipment. The dashboard should serve as a one-stop shop for a Service Analyst to keep tabs and prioritize work for their day.</p>
-                    </div>
-                </div>
-            </div>
-<!-- PERSONAS -->
-            <div class="section_container">
-                <div class="centered_heading">
-                    <h2 class="project_section_heading">Personas</h2>
-                    <p>The primary persona this dashboard is targeting is a Service Analyst. This role is responsible for coordinating all service events for all equipment types.</p>
-                </div>
-                <br>
-                <br>
-                <div class="personas_card">
-                    <h3>Service Analyst</h3>
-                    
-                    <h4>General Info</h4>
-                    <ul>
-                        <li>Two service analysts manage all equipment in the EquiPro application</li>
-                        <br>
-                        <li>Their work is driven by the compliance requirements for the equipment</li>
-                        <br>
-                        <li>The service events they schedule are critical to keeping equipment within compliance standards</li>
-                        <br>
-                        <li>Heavy use of email to communicate with service facilities</li>
-                        <br>
-                        <li>Usually very busy/overloaded as compliance is a rolling requirement</li>
-                    </ul>
-                    
-                    <h4>Pain Points</h4>
-                    <ul>
-                        <li>Long email chains</li>
-                        <br>
-                        <li>Constantly starting new chains due to service facilities only providing partial information, have to create new chain for remaining equipment number</li>
-                        <br>
-                        <li>Hard to find communication history and keep track of last contact with service facilities in regards to a particular piece of equipment</li>
-                        <br>
-                        <li>Current application offers a dashboard view, but encompasses all equipment and thus cannot effectively drive action and focus for the day</li>
-                        <br>
-                        <li>Would like the ability to communicate directly from the application if possible</li>
-                        <br>
-                        <li>Would like the ability to quickly see the last communication for a service event/equipment number</li>
-                    </ul>
-                </div>
-            </div>
-<!-- WIREFRAMES -->
-            <div id="wireframes_container">
-                <div class="section_container">
-                    <div>
-                        <h2 class="project_section_heading">Wireframes</h2>
-                        <p>Using Figma, I created low-fidelity wireframes to show end users my rough vision for the dashboard. These wireframes focus only on one widget within the overall dashboard, but the workflow established here could/would apply to the remaining widgets the users interact with.</p>
-                    </div>
-                    <br>
-                    <p>The main layout would consist of three metrics across the top that users mentioned in early discussions as being priorities, answering the following: What needs to be serviced? What events need to be submitted? What equipment is headed to the service facility?</p>
-                
-                </div>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Ian Grogan</a>
+    <div class="nav-links">
+      <a href="index.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="about.html#contact" class="btn btn-ghost" style="padding:0.5rem 1.1rem;font-size:0.75rem;">Let's Talk</a>
+    </div>
+  </nav>
 
-                <div class="section_container">
-                    <div class="center_image">
-                        <div class="imgdropshadow">
-                            <img id="wireframe" alt="low-fidelity wireframe of dashboard" src="img/SaaS/wireframe1.png">
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <p>To fulfill the gaps caused by email chains, I presented the users with the idea of being able to open a widget and see the last communication date for a given service event, as well as a brief preview of that communication (a tooltip on hover, not mocked up in the low-fidelity design).</p>
-                    
-                </div>
+  <div class="page-wrap">
 
-                
-                <div class="section_container">
-                    <div class="center_image">
-                        <div class="imgdropshadow">
-                            <img id="wireframe" alt="low-fidelity wireframe of dashboard widget interaction" src="img/SaaS/wireframe2.png">
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <p>Building further on the idea of getting the users out of their email inbox, I presented them with the idea of being able to select one or more events from within the widget and send communications directly from the application. This would reduce the “flip” between application and email that users were doing so much of.</p>
-                </div>
-                
-                
-                <div class="section_container">
-                    <div class="center_image">
-                        <div class="imgdropshadow">
-                            <img id="wireframe" alt="low-fidelitywireframe of dashboard message tool" src="img/SaaS/wireframe3.png">
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!-- UI DESIGN -->
-            <div class="section_container">
-                <div>
-                    <h2 class="project_section_heading">UI Design</h2>
-                    <p>
-                        The real version of this project utilized an original design system built from material components. For this project I used <a href="https://www.figma.com/community/file/1179442320711977498">Flowbite Design System</a> to create the high fidelity frames.
-                    </p>
-                </div>
+    <div class="case-hero">
+      <a href="index.html" class="case-back">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 11L2 7l4-4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All Work
+      </a>
+      <div class="case-eyebrow">
+        <div class="section-label">SaaS · Dashboard · Enterprise</div>
+      </div>
+      <h1 class="case-title">SaaS Dashboard</h1>
+      <p class="case-subtitle">Creating an action-driven dashboard for Service Analysts.</p>
 
-                <a href="https://www.figma.com/community/file/1179442320711977498">
-                    <div class="center_image">
-                        <img class="project_logo" alt="company logo" src="img/SaaS/flowbite_logo.svg">
-                    </div>
-                </a>
-            </div>
-<!-- HI FIDELTIY -->
-            <div class="section_container"> 
-                <p>High fidelity mockups (similar to these) were then shown to users for feedback as part of an iterative design process.</p>
-            </div>
-            <div class="section_container"> 
-                <div class="center_image">
-                    <img id="highfidelity_frames" src="img/SaaS/highfi_frames.png" alt="high fidelity wireframes">
-                </div>
-            </div>
-<!-- CONCLUSION -->
-            <div class="section_container">
-                <div class="centered_heading">
-                    <h2 class="project_section_heading">Learnings & Takeaways</h2>
-                </div>
-                <p>This portfolio highlight covered just one widget experience out of the whole dashboard. When I was designing this for the real product, we had a series of meetings with the end users. Each meeting we reviewed essentially the same widget over and over until we had refined them to a point of “perfection.”</p>
-                <br>
-                <p>This entailed redesigning a few of the widget drawers and actions within the drawers at least half a dozen times, but that is great! That's exactly what I look for when meeting with the end users. Ideas often sound great and potentially even look great on “paper” with a low-fidelity mockup. However, once the users see the design and get a feel through prototyping of how their workflow will be impacted, it becomes apparent where the areas for improvement are. </p>
-                <br>
-                <p>That is my favorite part of the UX process, testing and refining those high-fidelity designs with the end users and getting to feed off of their excitement for the product we are designing together. My main takeaway from this project and others like it has been understanding the importance of making the user feel like a part of the design process. The UX design process has to be a “we” process, not a “me” process. Getting the buy-in from users is so critical to creating good products that solve problems and provide value.</p>
-            </div>
-
+      <div class="case-meta">
+        <div class="case-meta-item">
+          <div class="case-meta-label">Type</div>
+          <div class="case-meta-value">Portfolio Project (NDA Similar)</div>
         </div>
-    </body>
+        <div class="case-meta-item">
+          <div class="case-meta-label">Role</div>
+          <div class="case-meta-value">UX / Product Designer</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="case-meta-label">Tools</div>
+          <div class="case-meta-value">Figma, Flowbite Design System</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="case-meta-label">Focus</div>
+          <div class="case-meta-value">Research · Wireframing · Hi-fi UI</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:var(--max-w); margin:0 auto; padding:0 clamp(1.5rem,5vw,4rem) 3rem;">
+      <img class="case-cover"
+           src="https://iankgrogan.github.io/design-portfolio/img/SaaS/cover.png"
+           alt="SaaS Dashboard UI mockup" loading="eager">
+    </div>
+
+    <div class="case-body">
+
+      <!-- Overview -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Overview</div>
+        <div class="case-section-content">
+          <h2>Building a day-driver for Service Analysts</h2>
+          <p>
+            This is a portfolio project similar to professional work I have done that is protected by NDA. The fifty-thousand-foot overview: build a dashboard that highlights information service analysts can take direct action on. The dashboard should serve as the primary driver of their day-to-day workflow.
+          </p>
+          <p>
+            I created this utilizing the Flowbite design system in place of the original proprietary design system.
+          </p>
+          <div class="callout">
+            <p>"The dashboard should serve as a one-stop shop for a Service Analyst to keep tabs and prioritize work for their day."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goal -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Goal</div>
+        <div class="case-section-content">
+          <h2>One place to prioritize the day</h2>
+          <p>
+            The goal of this project was to create an action-driven dashboard for users responsible for scheduling and communicating repair services on various pieces of equipment. Service Analysts needed a single place to see what required attention and act on it — without flipping between the application and their email inbox constantly.
+          </p>
+        </div>
+      </div>
+
+      <!-- Personas -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Personas</div>
+        <div class="case-section-content">
+          <h2>Understanding the Service Analyst</h2>
+          <p>The primary persona is a Service Analyst — responsible for coordinating all service events across all equipment types.</p>
+
+          <div class="persona-grid" style="grid-template-columns:1fr; margin:1.5rem 0;">
+            <div class="persona-card">
+              <div class="persona-name">Service Analyst</div>
+              <div class="persona-detail" style="margin-top:1rem;">
+                <span>Two analysts manage all equipment in the EquiPro application</span>
+                <span>Work driven by rolling compliance requirements</span>
+                <span>Service events are critical to keeping equipment within compliance standards</span>
+                <span>Heavy reliance on email to communicate with service facilities</span>
+                <span>Usually very busy — compliance is a continuous requirement</span>
+              </div>
+            </div>
+          </div>
+
+          <h3>Pain Points</h3>
+          <ul class="pain-list">
+            <li>Long, tangled email chains that are hard to track</li>
+            <li>Service facilities often provide partial info — requiring a brand new chain for remaining equipment</li>
+            <li>No easy way to find communication history for a specific piece of equipment</li>
+            <li>Current dashboard encompasses all equipment — can't effectively drive focus for the day</li>
+            <li>No ability to communicate directly from the application</li>
+            <li>No quick view of last communication date for a service event</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Wireframes -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Wireframes</div>
+        <div class="case-section-content">
+          <h2>From rough idea to testable layout</h2>
+          <p>
+            Using Figma, I created low-fidelity wireframes to show end users my rough vision for the dashboard. These wireframes focus on one widget within the overall dashboard, but the workflow established here applied to all remaining widgets.
+          </p>
+          <p>
+            The main layout consists of three key metrics across the top — answering: What needs to be serviced? What events need to be submitted? What equipment is headed to the service facility?
+          </p>
+          <img class="case-image"
+               src="https://iankgrogan.github.io/design-portfolio/img/SaaS/wireframe1.png"
+               alt="Low-fidelity wireframe of dashboard" loading="lazy">
+          <p class="case-image-caption">Dashboard layout wireframe — three metrics across the top</p>
+
+          <p>
+            To address the email chain problem, I presented users with the idea of seeing the last communication date directly within a widget — alongside a brief preview of that communication on hover.
+          </p>
+          <img class="case-image"
+               src="https://iankgrogan.github.io/design-portfolio/img/SaaS/wireframe2.png"
+               alt="Low-fidelity wireframe of widget interaction" loading="lazy">
+          <p class="case-image-caption">Widget interaction showing last communication date</p>
+
+          <p>
+            Building further on getting users out of their inbox, I introduced the concept of selecting one or more events and sending communications directly from the application — reducing the constant flip between the app and email.
+          </p>
+          <img class="case-image"
+               src="https://iankgrogan.github.io/design-portfolio/img/SaaS/wireframe3.png"
+               alt="Low-fidelity wireframe of messaging tool" loading="lazy">
+          <p class="case-image-caption">In-app messaging concept wireframe</p>
+        </div>
+      </div>
+
+      <!-- UI Design -->
+      <div class="case-section reveal">
+        <div class="case-section-label">UI Design</div>
+        <div class="case-section-content">
+          <h2>High-fidelity, then iterate</h2>
+          <p>
+            The real version of this project used an original design system built from Material components. For this portfolio version I used the Flowbite Design System to create the high-fidelity frames.
+          </p>
+          <p>
+            High-fidelity mockups were shown to users for feedback as part of an iterative design process — each round refining the widget drawers and actions within them.
+          </p>
+          <img class="case-image"
+               src="https://iankgrogan.github.io/design-portfolio/img/SaaS/highfi_frames.png"
+               alt="High fidelity design frames" loading="lazy">
+          <p class="case-image-caption">High-fidelity dashboard frames</p>
+        </div>
+      </div>
+
+      <!-- Learnings -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Takeaways</div>
+        <div class="case-section-content">
+          <h2>The "we" process over the "me" process</h2>
+          <p>
+            This case study covers just one widget experience out of the whole dashboard. When designing the real product, we had a series of meetings with end users — reviewing essentially the same widget over and over until we had refined it to a point of "perfection." Widget drawers and actions within them were redesigned at least half a dozen times — and that's exactly what I look for.
+          </p>
+          <p>
+            Ideas often sound and look great on paper. But once users see the design and prototype how their workflow will be impacted, it becomes clear where the improvements need to be made. That's my favorite part of the UX process — testing and refining high-fidelity designs with users, feeding off their excitement for the product we're designing together.
+          </p>
+          <div class="callout">
+            <p>My main takeaway: understanding the importance of making the user feel like a part of the design process. The UX design process has to be a "we" process, not a "me" process.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Next Project -->
+    <div style="max-width:var(--max-w); margin:0 auto; padding:0 clamp(1.5rem,5vw,4rem) clamp(4rem,8vw,7rem); display:flex; justify-content:flex-end;">
+      <a href="kbx.html" class="btn btn-primary">
+        Next Project: KBX Lease Payables
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <footer class="footer">
+      <span class="footer-copy">© 2025 Ian Grogan</span>
+      <div class="footer-links">
+        <a href="mailto:iankgrogan@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/iankgrogan" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
