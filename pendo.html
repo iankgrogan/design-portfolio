@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendo Integration — Ian Grogan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .case-back     { animation: fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.05s both; }
+    .case-eyebrow  { animation: fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.1s both; }
+    .case-title    { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.18s both; }
+    .case-subtitle { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.26s both; }
+    .case-meta     { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.32s both; }
+
+    /* Pendo hero banner */
+    .pendo-hero-banner {
+      width: 100%;
+      background: var(--color-bg);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 2rem;
+    }
+    .pendo-hero-banner img {
+      width: min(420px, 60%);
+      object-fit: contain;
+    }
+
+    /* Two-col stat blocks */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1px;
+      border: 1px solid var(--color-border);
+      border-radius: 2px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+    }
+    .stat-block {
+      background: var(--color-surface);
+      padding: 1.5rem;
+    }
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--color-accent);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--color-ink-2);
+    }
+
+    /* Use case list */
+    .use-case-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      margin: 1.5rem 0;
+    }
+    .use-case-item {
+      background: var(--color-surface);
+      padding: 1.25rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1.5rem 1fr;
+      gap: 1rem;
+      align-items: start;
+      border-radius: 1px;
+    }
+    .use-case-icon {
+      width: 1.5rem; height: 1.5rem;
+      background: var(--color-accent-soft);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 0.1rem;
+    }
+    .use-case-icon svg { color: var(--color-accent); }
+    .use-case-item h4 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+    .use-case-item p { font-size: 0.85rem; max-width: none; margin: 0; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Ian Grogan</a>
+    <div class="nav-links">
+      <a href="index.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="about.html#contact" class="btn btn-ghost" style="padding:0.5rem 1.1rem;font-size:0.75rem;">Let's Talk</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="case-hero">
+      <a href="index.html" class="case-back">
+        <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M12 7H2M6 11L2 7l4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All Work
+      </a>
+      <div class="case-eyebrow">
+        <div class="section-label">Analytics · In-App Guides · Salesforce</div>
+      </div>
+      <h1 class="case-title">Pendo Integration</h1>
+      <p class="case-subtitle">Driving user understanding and adoption through embedded analytics and in-app guidance.</p>
+
+      <div class="case-meta">
+        <div class="case-meta-item">
+          <div class="case-meta-label">Companies</div>
+          <div class="case-meta-value">Cox Automotive · KBX</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="case-meta-label">Role</div>
+          <div class="case-meta-value">UX / Product Designer</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="case-meta-label">Tool</div>
+          <div class="case-meta-value">Pendo</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="case-meta-label">Focus</div>
+          <div class="case-meta-value">Usage Analytics · In-App Guides · Onboarding</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero banner -->
+    <div style="max-width:var(--max-w); margin:0 auto; padding:0 clamp(1.5rem,5vw,4rem) 3rem;">
+      <div class="pendo-hero-banner">
+        <img src="img/pendo/pendo.png" alt="Pendo">
+      </div>
+    </div>
+
+    <div class="case-body">
+
+      <!-- Overview -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Overview</div>
+        <div class="case-section-content">
+          <h2>Closing the gap between design and behavior</h2>
+          <p>
+            Pendo is a product analytics and in-app guidance platform that I have been the main driver of integrating within Salesforce applications at Cox Automotive, and previously utilized at KBX. It gives our team direct visibility into how users are actually navigating our products — not how we assume they are.
+          </p>
+          <p>
+            At Cox Automotive, I lead the Pendo integration effort across our Salesforce environments. The goal is two-fold: gather a better understanding of the challenges our users face day-to-day, and create in-app guides that keep users informed on new features, changes, and intended workflows — without requiring them to leave the application or hunt through documentation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Why Pendo -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Why Pendo</div>
+        <div class="case-section-content">
+          <h2>Data where assumptions used to live</h2>
+          <p>
+            Before Pendo, understanding how users interacted with our Salesforce apps relied heavily on anecdotal feedback, support tickets, and gut instinct. That's a slow and incomplete picture. Pendo gives us quantitative data to pair with the qualitative insights we gather from user interviews and testing.
+          </p>
+          <p>
+            Knowing which features go unused, where users drop off, and what paths they actually take through the application fundamentally changes the design conversation. It turns "I think users struggle with X" into "users spend 3x longer on X than anywhere else in the flow."
+          </p>
+          <div class="callout">
+            <p>Pendo data doesn't replace user research — it sharpens it. It tells you where to look, so interviews and testing can focus on the why.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- What I do with it -->
+      <div class="case-section reveal">
+        <div class="case-section-label">How I use it</div>
+        <div class="case-section-content">
+          <h2>Two core use cases</h2>
+
+          <div class="use-case-list">
+            <div class="use-case-item">
+              <div class="use-case-icon">
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h4>Usage Analytics</h4>
+                <p>Tracking feature adoption, navigation paths, session length, and click patterns across our Salesforce environments. This data feeds directly into design decisions — if a feature has low engagement, we investigate whether it's a discoverability problem, a workflow mismatch, or a design gap.</p>
+              </div>
+            </div>
+            <div class="use-case-item">
+              <div class="use-case-icon">
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 4h10M2 7h7M2 10h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h4>In-App Guides</h4>
+                <p>Building contextual guides that appear at the right moment in a user's workflow — announcing new features, walking users through changed processes, and surfacing best practices for how specific features are intended to be used. This reduces support burden and ensures changes don't catch users off guard.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3>Guide types I build</h3>
+          <ul class="pain-list">
+            <li>Lightbox announcements for major feature releases or workflow changes</li>
+            <li>Tooltip walkthroughs on newly redesigned screens</li>
+            <li>Banners surfacing time-sensitive information or reminders</li>
+            <li>Onboarding checklists for new users entering a Salesforce environment for the first time</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Impact -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Impact</div>
+        <div class="case-section-content">
+          <h2>Informing design with real behavior</h2>
+          <p>
+            Having Pendo embedded has meaningfully changed how our team approaches both new feature design and post-launch evaluation. Rather than waiting for support tickets or conducting reactive research after a release, we can proactively monitor adoption and identify friction points within days of a launch.
+          </p>
+          <p>
+            Guides have proven especially effective at reducing the volume of "how do I..." questions that previously came through to the product team after any significant change — keeping users unblocked and informed without requiring a dedicated training effort.
+          </p>
+          <div class="stat-grid">
+            <div class="stat-block">
+              <div class="stat-value">2</div>
+              <div class="stat-label">Companies where I've driven Pendo integration</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-value">↓</div>
+              <div class="stat-label">Reduction in "how do I..." support questions post-launch</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-value">↑</div>
+              <div class="stat-label">Faster identification of feature adoption gaps after releases</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Takeaways -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Takeaways</div>
+        <div class="case-section-content">
+          <h2>Design is never done at launch</h2>
+          <p>
+            Pendo reinforced something I already believed but now have data to prove: shipping a feature is the beginning of the design process, not the end. User behavior after launch almost always surfaces something worth improving — and having that visibility in real time makes you a better, more responsive designer.
+          </p>
+          <p>
+            It's also made me more intentional about designing for discoverability. If analytics show users aren't finding a feature, the instinct can be to build a guide for it — but the better question is why the feature wasn't findable in the first place. Pendo data is most valuable when it pushes you back into the design file, not just into the guide builder.
+          </p>
+          <div class="callout">
+            <p>The best in-app guide is one that becomes unnecessary — because the design was clear enough that users didn't need it.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Back to work -->
+    <div style="max-width:var(--max-w); margin:0 auto; padding:0 clamp(1.5rem,5vw,4rem) clamp(4rem,8vw,7rem); display:flex; justify-content:flex-end;">
+      <a href="index.html" class="btn btn-ghost">
+        <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M12 7H2M6 11L2 7l4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to All Work
+      </a>
+    </div>
+
+    <footer class="footer">
+      <span class="footer-copy">© 2025 Ian Grogan</span>
+      <div class="footer-links">
+        <a href="mailto:iankgrogan@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/iankgrogan" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
