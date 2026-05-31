@@ -146,47 +146,39 @@
       <div class="case-section reveal">
         <div class="case-section-label">Overview</div>
         <div class="case-section-content">
-          <h2>Closing the gap between design and behavior</h2>
+          <h2>Bringing Pendo to Cox Fleet — from the ground up</h2>
           <p>
-            Pendo is a product analytics and in-app guidance platform that I have been the main driver of integrating within Salesforce applications at Cox Automotive, and previously utilized at KBX. It gives our team direct visibility into how users are actually navigating our products — not how we assume they are.
+            Pendo is a product analytics and in-app guidance platform I have integrated at two companies — KBX and Cox Automotive. At Cox Auto, other areas of the business had already been using Pendo, but I am the person spearheading its adoption specifically within the Cox Fleet apps. This is a greenfield effort: establishing the foundation, the process, and the best practices from scratch for our team.
           </p>
           <p>
-            At Cox Automotive, I lead the Pendo integration effort across our Salesforce environments. The goal is two-fold: gather a better understanding of the challenges our users face day-to-day, and create in-app guides that keep users informed on new features, changes, and intended workflows — without requiring them to leave the application or hunt through documentation.
+            Cox Fleet runs on Salesforce Lightning Web Apps — environments that are powerful but notoriously difficult to navigate without experience. My goal with Pendo is to reduce that friction, surface the right information at the right time, and build a continuous feedback loop between user behavior and design decisions.
           </p>
         </div>
       </div>
 
-      <!-- Why Pendo -->
+      <!-- Objectives -->
       <div class="case-section reveal">
-        <div class="case-section-label">Why Pendo</div>
+        <div class="case-section-label">Objectives</div>
         <div class="case-section-content">
-          <h2>Data where assumptions used to live</h2>
-          <p>
-            Before Pendo, understanding how users interacted with our Salesforce apps relied heavily on anecdotal feedback, support tickets, and gut instinct. That's a slow and incomplete picture. Pendo gives us quantitative data to pair with the qualitative insights we gather from user interviews and testing.
-          </p>
-          <p>
-            Knowing which features go unused, where users drop off, and what paths they actually take through the application fundamentally changes the design conversation. It turns "I think users struggle with X" into "users spend 3x longer on X than anywhere else in the flow."
-          </p>
-          <div class="callout">
-            <p>Pendo data doesn't replace user research — it sharpens it. It tells you where to look, so interviews and testing can focus on the why.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- What I do with it -->
-      <div class="case-section reveal">
-        <div class="case-section-label">How I use it</div>
-        <div class="case-section-content">
-          <h2>Two core use cases</h2>
+          <h2>Four things Pendo helps us do better</h2>
 
           <div class="use-case-list">
             <div class="use-case-item">
               <div class="use-case-icon">
-                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M7 4v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </div>
               <div>
-                <h4>Usage Analytics</h4>
-                <p>Tracking feature adoption, navigation paths, session length, and click patterns across our Salesforce environments. This data feeds directly into design decisions — if a feature has low engagement, we investigate whether it's a discoverability problem, a workflow mismatch, or a design gap.</p>
+                <h4>Surface rough UX</h4>
+                <p>Identify areas where users get stuck or frustrated — long click paths, confusing flows, dead ends. Analytics and session replays reveal friction that never makes it into a support ticket or feedback form.</p>
+              </div>
+            </div>
+            <div class="use-case-item">
+              <div class="use-case-icon">
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h4>Streamline workflows</h4>
+                <p>Salesforce environments can be overwhelming for new users. Pendo guides give users clear direction up front while still allowing advanced users the freedom to work the way they want. The goal is to get users from A to B without the "Salesforce-y-ness" getting in the way.</p>
               </div>
             </div>
             <div class="use-case-item">
@@ -194,45 +186,89 @@
                 <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 4h10M2 7h7M2 10h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </div>
               <div>
-                <h4>In-App Guides</h4>
-                <p>Building contextual guides that appear at the right moment in a user's workflow — announcing new features, walking users through changed processes, and surfacing best practices for how specific features are intended to be used. This reduces support burden and ensures changes don't catch users off guard.</p>
+                <h4>Communicate changes</h4>
+                <p>Announce new features or changes to existing ones directly within the app — where users actually are — instead of relying on emails that go unread or documentation that goes unfound. No more "wait, when did that change?" moments.</p>
+              </div>
+            </div>
+            <div class="use-case-item">
+              <div class="use-case-icon">
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><rect x="2" y="2" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 7h4M5 5h4M5 9h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h4>In-app release notes</h4>
+                <p>Establishing a living release notes catalog via the Pendo Resource Center — giving users a persistent, always-accessible log of what's changed and when, without ever leaving the application.</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <h3>Guide types I build</h3>
+      <!-- Pendo Replays -->
+      <div class="case-section reveal">
+        <div class="case-section-label">Session Replays</div>
+        <div class="case-section-content">
+          <h2>First-person perspective on real behavior</h2>
+          <p>
+            One of the most valuable things I've set up is Pendo session replays with key team members. Traditional feedback channels — surveys, interviews, Slack messages — capture what users think they do or what they remember struggling with. Replays capture what they actually do.
+          </p>
+          <p>
+            The most interesting patterns to catch are the instinctual workarounds: the extra clicks, the navigation detours, the copy-paste behaviors that users have normalized to the point where they no longer mention them as pain points. They've just adapted. Replays surface these invisible frustrations and turn them into concrete design improvements.
+          </p>
+          <div class="callout">
+            <p>The workarounds users don't mention are often more revealing than the problems they do. Replays make the invisible visible.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- What I've done -->
+      <div class="case-section reveal">
+        <div class="case-section-label">What I've built</div>
+        <div class="case-section-content">
+          <h2>Direct contributions to the integration</h2>
+          <p>
+            As the driver of this effort for Cox Fleet, I've handled the full scope of the Pendo implementation — not just the design side, but the technical setup and operational foundation as well.
+          </p>
+
           <ul class="pain-list">
-            <li>Lightbox announcements for major feature releases or workflow changes</li>
-            <li>Tooltip walkthroughs on newly redesigned screens</li>
-            <li>Banners surfacing time-sensitive information or reminders</li>
-            <li>Onboarding checklists for new users entering a Salesforce environment for the first time</li>
+            <li><strong>Page and feature tagging</strong> — Mapping out and tagging all key pages and features across our Lightning Web Apps so we can accurately track adoption, usage frequency, and navigation patterns at a granular level.</li>
+            <li><strong>Guide creation</strong> — Designing and building in-app guides across multiple types: lightbox announcements, tooltip walkthroughs, banners, and onboarding flows — each targeting specific user segments and triggering at the right point in the workflow.</li>
+            <li><strong>Resource Center &amp; release notes</strong> — Establishing best practices for ongoing release note management via the Pendo Resource Center, creating a scalable system for communicating changes consistently over time.</li>
+            <li><strong>Pendo toolkit installation</strong> — Installing and configuring the Pendo toolkit for Salesforce into two Lightning Web Apps, handling the technical integration that makes all of the above possible.</li>
+          </ul>
+
+          <h3>Guide types in use</h3>
+          <ul class="pain-list">
+            <li>Lightbox announcements for major feature releases and workflow changes</li>
+            <li>Tooltip walkthroughs on newly redesigned or introduced screens</li>
+            <li>Banners surfacing time-sensitive information or action reminders</li>
+            <li>Onboarding flows for new users entering a Cox Fleet Salesforce environment for the first time</li>
           </ul>
         </div>
       </div>
 
-      <!-- Impact -->
+      <!-- Why it matters -->
       <div class="case-section reveal">
-        <div class="case-section-label">Impact</div>
+        <div class="case-section-label">Why it matters</div>
         <div class="case-section-content">
-          <h2>Informing design with real behavior</h2>
+          <h2>Closing the loop between design and behavior</h2>
           <p>
-            Having Pendo embedded has meaningfully changed how our team approaches both new feature design and post-launch evaluation. Rather than waiting for support tickets or conducting reactive research after a release, we can proactively monitor adoption and identify friction points within days of a launch.
+            Before Pendo, our understanding of how users navigated the Fleet apps relied on anecdotal feedback, support tickets, and what surfaced in scheduled research sessions. That's a slow and incomplete picture — and it only captures what users choose to articulate.
           </p>
           <p>
-            Guides have proven especially effective at reducing the volume of "how do I..." questions that previously came through to the product team after any significant change — keeping users unblocked and informed without requiring a dedicated training effort.
+            Pendo gives the team a continuous, quantitative signal to pair with qualitative research. It doesn't replace user interviews or usability testing — it sharpens them. It tells you exactly where to look, so research time is spent understanding the why behind what the data shows.
           </p>
           <div class="stat-grid">
             <div class="stat-block">
               <div class="stat-value">2</div>
-              <div class="stat-label">Companies where I've driven Pendo integration</div>
+              <div class="stat-label">Lightning Web Apps with Pendo toolkit installed</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-value">2</div>
+              <div class="stat-label">Companies where I've led Pendo integration</div>
             </div>
             <div class="stat-block">
               <div class="stat-value">↓</div>
-              <div class="stat-label">Reduction in "how do I..." support questions post-launch</div>
-            </div>
-            <div class="stat-block">
-              <div class="stat-value">↑</div>
-              <div class="stat-label">Faster identification of feature adoption gaps after releases</div>
+              <div class="stat-label">Reactive "how do I..." questions after feature releases</div>
             </div>
           </div>
         </div>
@@ -244,13 +280,13 @@
         <div class="case-section-content">
           <h2>Design is never done at launch</h2>
           <p>
-            Pendo reinforced something I already believed but now have data to prove: shipping a feature is the beginning of the design process, not the end. User behavior after launch almost always surfaces something worth improving — and having that visibility in real time makes you a better, more responsive designer.
+            Pendo reinforced something I already believed but now have data to prove: shipping a feature is the beginning of the design process, not the end. User behavior after launch almost always surfaces something worth improving — and having that visibility makes you a more responsive, more grounded designer.
           </p>
           <p>
-            It's also made me more intentional about designing for discoverability. If analytics show users aren't finding a feature, the instinct can be to build a guide for it — but the better question is why the feature wasn't findable in the first place. Pendo data is most valuable when it pushes you back into the design file, not just into the guide builder.
+            It's also made me more intentional about designing for discoverability. If analytics show users aren't finding a feature, the instinct can be to build a guide for it — but the better first question is why the feature wasn't findable in the first place. Pendo data is most valuable when it sends you back to the design file, not just into the guide builder.
           </p>
           <div class="callout">
-            <p>The best in-app guide is one that becomes unnecessary — because the design was clear enough that users didn't need it.</p>
+            <p>The best in-app guide is one that eventually becomes unnecessary — because the design became clear enough that users no longer needed it.</p>
           </div>
         </div>
       </div>
