@@ -54,6 +54,94 @@
       margin-bottom: 0.5rem;
     }
 
+    /* AI in Design section */
+    .ai-section {
+      padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+      background: var(--color-ink);
+    }
+    .ai-section-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .ai-header {
+      margin-bottom: 3.5rem;
+    }
+    .ai-header .section-label {
+      color: rgba(248,246,241,0.4);
+    }
+    .ai-header .section-label::before {
+      background: var(--color-accent);
+    }
+    .ai-header h2 {
+      color: var(--color-bg);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+    }
+    .ai-intro {
+      color: rgba(248,246,241,0.55);
+      font-size: 1rem;
+      max-width: 56ch;
+    }
+    .ai-phases {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .ai-phase {
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      gap: 2rem;
+      padding: 2.5rem 0;
+      border-top: 1px solid rgba(248,246,241,0.1);
+      align-items: start;
+    }
+    .ai-phase-marker {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      color: var(--color-accent);
+      padding-top: 0.3rem;
+      letter-spacing: 0.05em;
+    }
+    .ai-phase-label {
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(248,246,241,0.35);
+      margin-bottom: 0.5rem;
+    }
+    .ai-phase-content h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--color-bg);
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+    .ai-phase-content p {
+      color: rgba(248,246,241,0.55);
+      font-size: 0.9rem;
+      max-width: 70ch;
+      margin-bottom: 1.25rem;
+    }
+    .ai-tools-used {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .ai-tools-used span {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      border: 1px solid rgba(200,80,58,0.35);
+      padding: 0.3rem 0.75rem;
+      border-radius: 1px;
+    }
+    @media (max-width: 560px) {
+      .ai-phase { grid-template-columns: 2rem 1fr; gap: 1rem; }
+    }
+
     /* Experience logo strip */
     .logo-strip {
       border-top: 1px solid var(--color-border);
@@ -214,7 +302,7 @@
         <div class="section-label reveal" style="justify-content:center; margin-bottom:2rem;">Experience</div>
         <div class="logo-row reveal reveal-delay-1">
           <div class="logo-item">
-            <img src="img/home/coxauto.png" alt="Cox Automotive">
+            <img src="img/home/coxauto.PNG" alt="Cox Automotive">
           </div>
           <div class="logo-divider"></div>
           <div class="logo-item">
@@ -224,6 +312,78 @@
           <div class="logo-item">
             <img src="img/home/logisticus.png" alt="Logisticus Group">
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI IN DESIGN -->
+    <div class="ai-section">
+      <div class="ai-section-inner">
+        <div class="ai-header reveal">
+          <div class="section-label">Process</div>
+          <h2>AI in my design process</h2>
+          <p class="ai-intro">I've built AI tools into every phase of my workflow — not as a shortcut, but as a way to spend more time on the design decisions that actually matter. The key to using AI effectively is knowing what you need out of it. I'm not relying on AI to tell me what needs to be done — I'm using it to drive the process forward faster, because I already know where I'm going.</p>
+        </div>
+
+        <div class="ai-phases">
+
+          <div class="ai-phase reveal">
+            <div class="ai-phase-marker">01</div>
+            <div class="ai-phase-content">
+              <div class="ai-phase-label">Discovery &amp; Organization</div>
+              <h3>Building a smarter project foundation</h3>
+              <p>At the start of a project I use Copilot and Gemini to compile meeting transcripts and notes into clean text files. Those files go into a Claude Project, turning it into an effective co-worker that has full context on goals, requirements, and decisions. From there I can ask Claude to surface high-level objectives, summarize requirements, or dig into specifics — without hunting through old notes or recordings.</p>
+              <div class="ai-tools-used">
+                <span>Claude</span>
+                <span>Copilot</span>
+                <span>Gemini</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-phase reveal reveal-d1">
+            <div class="ai-phase-marker">02</div>
+            <div class="ai-phase-content">
+              <div class="ai-phase-label">Early Design</div>
+              <h3>Quick, dirty prototypes that communicate ideas fast</h3>
+              <p>In early design phases I use Claude to generate rough HTML prototypes — quick, functional, and just polished enough to communicate an idea to stakeholders before a follow-up meeting. When a more refined version is needed, I extract requirements from Claude, then feed those into Copilot or Gemini to generate a detailed, high-character prompt — which I give back to Claude to produce a more polished, colorful, production-like prototype.</p>
+              <div class="ai-tools-used">
+                <span>Claude</span>
+                <span>Copilot</span>
+                <span>Gemini</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-phase reveal reveal-d2">
+            <div class="ai-phase-marker">03</div>
+            <div class="ai-phase-content">
+              <div class="ai-phase-label">High-Fidelity Prototyping</div>
+              <h3>Figma Make for production-quality prototypes</h3>
+              <p>When a high-fidelity prototype is needed — one that's accurately themed and styled to reflect the real finished product — I use Figma Make. To get the best output, I use Claude to generate a structured list of requirements based on project information and early prototypes, then use Copilot or Gemini to transform that into a detailed, high-character prompt optimized for Figma Make's input. The result is a prototype that closely mirrors what the final product will look and feel like.</p>
+              <div class="ai-tools-used">
+                <span>Figma Make</span>
+                <span>Claude</span>
+                <span>Copilot</span>
+                <span>Gemini</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-phase reveal reveal-d3">
+            <div class="ai-phase-marker">04</div>
+            <div class="ai-phase-content">
+              <div class="ai-phase-label">Deliverables</div>
+              <h3>From prototype to design files and the backlog</h3>
+              <p>Once prototyping wraps up, the path to deliverables depends on what was used to build them. If I prototyped in Figma Make, I export the frames directly into design files and refine them manually — swapping in proper design system components and making adjustments as needed. If the prototype was built in Claude, the project is typically straightforward enough that I can move straight to hand-building the designs using design system components quickly.</p>
+              <p>Either way, the final step is getting work into the development backlog. I use Claude to draft features and user stories quickly — feeding in the project context already stored in the Claude Project to produce well-structured, accurate stories that are ready to hand off without a lot of back and forth.</p>
+              <div class="ai-tools-used">
+                <span>Figma</span>
+                <span>Claude</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -337,7 +497,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <span class="footer-copy">© 2025 Ian Grogan</span>
+      <span class="footer-copy">© 2026 Ian Grogan</span>
       <div class="footer-links">
         <a href="mailto:iankgrogan@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/iankgrogan" target="_blank" rel="noopener">LinkedIn</a>
