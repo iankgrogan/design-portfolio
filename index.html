@@ -54,6 +54,52 @@
       margin-bottom: 0.5rem;
     }
 
+    /* Experience logo strip */
+    .logo-strip {
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 3rem clamp(1.5rem, 5vw, 4rem);
+    }
+    .logo-strip-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .logo-item {
+      flex: 1;
+      min-width: 160px;
+      max-width: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 2.5rem;
+    }
+    .logo-item img {
+      width: 100%;
+      max-height: 48px;
+      object-fit: contain;
+      opacity: 0.85;
+      transition: opacity 0.3s ease;
+    }
+    .logo-item img:hover { opacity: 1; }
+    .logo-divider {
+      width: 1px;
+      height: 40px;
+      background: var(--color-border);
+      flex-shrink: 0;
+    }
+    @media (max-width: 560px) {
+      .logo-row { flex-direction: column; gap: 2rem; }
+      .logo-divider { display: none; }
+      .logo-item { max-width: 200px; padding: 0; }
+    }
+
     /* Pendo card background */
     .pendo-card-bg {
       background: #FFFFFF;
@@ -159,6 +205,26 @@
       <span class="ticker-item"><span class="ticker-dot"></span>AI-Assisted Design</span>
       <span class="ticker-item"><span class="ticker-dot"></span>SaaS Applications</span>
       <span class="ticker-item"><span class="ticker-dot"></span>Mobile Design</span>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE LOGOS -->
+    <div class="logo-strip">
+      <div class="logo-strip-inner">
+        <div class="section-label reveal" style="justify-content:center; margin-bottom:2rem;">Experience</div>
+        <div class="logo-row reveal reveal-delay-1">
+          <div class="logo-item">
+            <img src="img/logos/coxauto.png" alt="Cox Automotive">
+          </div>
+          <div class="logo-divider"></div>
+          <div class="logo-item">
+            <img src="img/logos/kbx.png" alt="KBX">
+          </div>
+          <div class="logo-divider"></div>
+          <div class="logo-item">
+            <img src="img/logos/logisticus.png" alt="Logisticus Group">
+          </div>
+        </div>
       </div>
     </div>
 
