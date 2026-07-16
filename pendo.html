@@ -220,6 +220,45 @@
         </div>
       </div>
 
+      <!-- Intake Flow Analysis -->
+      <div class="case-section reveal">
+        <div class="case-section-label">In Practice</div>
+        <div class="case-section-content">
+          <h2>Intake flow analysis — data over assumptions</h2>
+          <p>
+            One of the most impactful examples of Pendo in action was a business complaint that the new intake flow took 3–5x longer to complete than the legacy system. Rather than take that at face value, we used Pendo to investigate it properly.
+          </p>
+
+          <h3>Establishing a baseline</h3>
+          <p>
+            We ran timed test runs on the legacy system to get a concrete baseline for how long agents took to complete the intake flow end-to-end. That gave us something real to compare against rather than relying on subjective perception.
+          </p>
+
+          <h3>Finding the truth in the data</h3>
+          <p>
+            To analyze the new system properly, I built a dedicated Pendo dashboard focused specifically on the case intake flow. This dashboard housed the paths, journeys, and funnel reports that let us see exactly how agents were moving through the intake process — where they completed it, where they slowed down, and where they dropped off entirely. From there, we used the journey data to filter down to targeted session replays and manually track completion times against the legacy baseline.
+          </p>
+          <p>
+            The result: the new system was approximately 20% slower than legacy — not 3–5x. And critically, the new intake flow collects significantly more information than the legacy system did. When you account for that additional data collection, the net difference in time per unit of work completed is negligible.
+          </p>
+
+          <div class="callout">
+            <p>The complaint was real, but the data told a different story. Pendo gave us the evidence to reframe the conversation from "this is broken" to "here's what's actually happening — and here's what we can fix."</p>
+          </div>
+
+          <h3>What the replays actually revealed</h3>
+          <p>
+            While the timing data was reassuring, the completion and drop-off replays surfaced genuine friction points that were worth solving. The consistent issues we identified and prioritized for the backlog included:
+          </p>
+          <ul class="pain-list">
+            <li><strong>Late duplicate discovery</strong> — Agents were reaching existing cases too late in the intake flow, after already completing a significant portion of the work, resulting in duplicate intake effort.</li>
+            <li><strong>Unclear starting point</strong> — The intake flow allows agents to begin with either an asset or an account, but neither option was clearly signposted as the right starting point, causing hesitation and inconsistent paths.</li>
+            <li><strong>Invalid asset workarounds</strong> — When an asset was flagged as invalid, the system lacked a clear path forward, forcing agents to develop manual workarounds to continue the flow.</li>
+            <li><strong>Additional friction points</strong> — Smaller but consistent moments of confusion and hesitation that, in aggregate, contributed to the perception that the system was significantly slower than it actually was.</li>
+          </ul>
+        </div>
+      </div>
+
       <!-- What I've done -->
       <div class="case-section reveal">
         <div class="case-section-label">What I've built</div>
